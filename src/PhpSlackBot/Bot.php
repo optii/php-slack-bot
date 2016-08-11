@@ -48,6 +48,10 @@ class Bot {
         $this->authentificationToken = $authentificationToken;
     }
 
+    public function getBotId(){
+        return $this->context['self']['id'];
+    }
+
     public function run() {
         if (!isset($this->params['token'])) {
             throw new \Exception('A token must be set. Please see https://my.slack.com/services/new/bot');
